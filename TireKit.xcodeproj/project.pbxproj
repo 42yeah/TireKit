@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		18426E532283F8EE00F1D360 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18426E522283F8EE00F1D360 /* main.cpp */; };
+		18426E5F2283F96800F1D360 /* libUltralight.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 18426E5B2283F96800F1D360 /* libUltralight.dylib */; };
+		18426E602283F96800F1D360 /* libUltralightCore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 18426E5C2283F96800F1D360 /* libUltralightCore.dylib */; };
+		18426E612283F96800F1D360 /* libWebCore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 18426E5D2283F96800F1D360 /* libWebCore.dylib */; };
+		18426E622283F96800F1D360 /* libAppCore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 18426E5E2283F96800F1D360 /* libAppCore.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,13 @@
 /* Begin PBXFileReference section */
 		18426E4F2283F8EE00F1D360 /* TireKit */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TireKit; sourceTree = BUILT_PRODUCTS_DIR; };
 		18426E522283F8EE00F1D360 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		18426E5B2283F96800F1D360 /* libUltralight.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libUltralight.dylib; path = ../../../../usr/local/Depends/UltraLight/lib/libUltralight.dylib; sourceTree = "<group>"; };
+		18426E5C2283F96800F1D360 /* libUltralightCore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libUltralightCore.dylib; path = ../../../../usr/local/Depends/UltraLight/lib/libUltralightCore.dylib; sourceTree = "<group>"; };
+		18426E5D2283F96800F1D360 /* libWebCore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libWebCore.dylib; path = ../../../../usr/local/Depends/UltraLight/lib/libWebCore.dylib; sourceTree = "<group>"; };
+		18426E5E2283F96800F1D360 /* libAppCore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libAppCore.dylib; path = ../../../../usr/local/Depends/UltraLight/lib/libAppCore.dylib; sourceTree = "<group>"; };
+		18426E662283FA7B00F1D360 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		18426E68228407E800F1D360 /* photon.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = photon.css; sourceTree = "<group>"; };
+		18426E692284101B00F1D360 /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +43,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18426E5F2283F96800F1D360 /* libUltralight.dylib in Frameworks */,
+				18426E602283F96800F1D360 /* libUltralightCore.dylib in Frameworks */,
+				18426E612283F96800F1D360 /* libWebCore.dylib in Frameworks */,
+				18426E622283F96800F1D360 /* libAppCore.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +56,10 @@
 		18426E462283F8EE00F1D360 = {
 			isa = PBXGroup;
 			children = (
+				18426E642283FA6100F1D360 /* Res */,
 				18426E512283F8EE00F1D360 /* TireKit */,
 				18426E502283F8EE00F1D360 /* Products */,
+				18426E5A2283F96800F1D360 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +79,27 @@
 			path = TireKit;
 			sourceTree = "<group>";
 		};
+		18426E5A2283F96800F1D360 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18426E5E2283F96800F1D360 /* libAppCore.dylib */,
+				18426E5B2283F96800F1D360 /* libUltralight.dylib */,
+				18426E5C2283F96800F1D360 /* libUltralightCore.dylib */,
+				18426E5D2283F96800F1D360 /* libWebCore.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		18426E642283FA6100F1D360 /* Res */ = {
+			isa = PBXGroup;
+			children = (
+				18426E68228407E800F1D360 /* photon.css */,
+				18426E662283FA7B00F1D360 /* index.html */,
+				18426E692284101B00F1D360 /* script.js */,
+			);
+			path = Res;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -72,6 +110,7 @@
 				18426E4B2283F8EE00F1D360 /* Sources */,
 				18426E4C2283F8EE00F1D360 /* Frameworks */,
 				18426E4D2283F8EE00F1D360 /* CopyFiles */,
+				18426E592283F94C00F1D360 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -112,6 +151,26 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18426E592283F94C00F1D360 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp -rf /usr/local/Depends/UltraLight/lib/* ${BUILT_PRODUCTS_DIR}\ncp -rf ${SRCROOT}/Res ${BUILT_PRODUCTS_DIR}\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18426E4B2283F8EE00F1D360 /* Sources */ = {
@@ -241,6 +300,8 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KL2JALR869;
+				HEADER_SEARCH_PATHS = /usr/local/Depends/UltraLight/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/Depends/UltraLight/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -250,6 +311,8 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KL2JALR869;
+				HEADER_SEARCH_PATHS = /usr/local/Depends/UltraLight/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/Depends/UltraLight/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

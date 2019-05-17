@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="file:///Res/photon.css">
+        <script src="file:///Res/script.js"></script>
+    </head>
+    <body>
+        <div class="window">
+            <div class="window-content">
+                <div class="pane-group">
+                    <div class="pane-sm sidebar">
+                        <nav class="nav-group">
+                            <h5 class="nav-group-title">数据</h5>
+                            <span class="nav-group-item active" id="sendButton" onclick="showPane('sendPane')">发送</span>
+                            <span class="nav-group-item" id="recvButton" onclick="showPane('recvPane')">接收</span>
+                        </nav>
+                    </div>
+                    
+                    <div class="pane" id="errPane">
+                        <div class="window">
+                            <header class="toolbar header-toolbar">
+                                <h1 class="title" name="header">服务器还没运行。</h1>
+                            </header>
+                            <div class="window-content padded-more">
+                                <div>
+                                    <div id="portForm">
+                                        <label>架设端口</label>
+                                        <input class="form-control" value="30018" id="port">
+                                    </div>
+                                    <p class="text-muted text-center" id="err">服务器还没运行。你要先架设服务器才能看到更多消息。</p>
+                                </div>
+                            </div>
+                            <footer class="toolbar toolbar-footer">
+                                <div class="toolbar-actions">
+                                    <button class="btn btn-primary pull-right" onclick="setupServer();">架设服务器</button>
+                                </div>
+                            </footer>
+                        </div>
+                    </div>
+                    
+                    <div class="pane hide" id="sendPane">
+                        <div class="window">
+                            <header class="toolbar header-toolbar">
+                                <h1 class="title" name="header">服务器还没运行。</h1>
+                            </header>
+                            
+                            <div class="window-content padded-more">
+                                <div>
+                                    <div class="form-group">
+                                        <label>序列号</label>
+                                        <input class="form-control" value="123456" id="serial">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>车型码</label>
+                                        <input class="form-control" value="TD     T32        " id="code">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>等待回复秒数</label>
+                                        <input class="form-control" value="1" id="delay" type="number" step="1" onchange="setDelay()">
+                                    </div>
+                                    
+                                    <table class="table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>时间</th>
+                                                <th>序列号</th>
+                                                <th>请求</th>
+                                                <th>OK 否</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="body">
+                                            
+                                        </tbody>
+                                        <tr>
+                                            <td colspan="4" id="total">一共 0 条</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <footer class="toolbar toolbar-footer">
+                                <div class="toolbar-actions">
+                                    <button class="btn btn-negative pull-right" onclick="stopServer();">停止服务器</button>
+                                </div>
+                            </footer>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="pane hide" id="recvPane">
+                        <div class="window">
+                            <header class="toolbar header-toolbar">
+                                <h1 class="title" name="header">服务器还没运行。</h1>
+                            </header>
+                            
+                            <div class="window-content padded-more">
+                                <textarea class="form-control" id="frame">0x0</textarea>
+                            </div>
+                            
+                            <footer class="toolbar toolbar-footer">
+                                <div class="toolbar-actions">
+                                    <button class="disabled btn btn-default" id="prevFrame" onclick="frame(currentFrame - 1)">上一帧</button>
+                                    <button class="disabled btn btn-default" id="nextFrame" onclick="frame(currentFrame + 1)">下一帧</button>
+                                    <button class="btn btn-negative pull-right" onclick="stopServer();">停止服务器</button>
+                                </div>
+                            </footer>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
